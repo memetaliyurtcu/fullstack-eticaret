@@ -24,7 +24,6 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 //Hafızayı tüm sisteme dağıtma
 export function CartProvider({ children }: { children: ReactNode }) {
     const [sepet, setSepet] = useState<CartItem[]>([]); //Sepetin başlangıçtaki durumu
-
     const sepeteEkle = (yeniUrun: CartItem) => {
         setSepet((eskiSepet) => {
             // Kullanıcı bu ürünü daha önce sepete eklemiş mi

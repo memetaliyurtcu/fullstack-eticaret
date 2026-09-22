@@ -1,0 +1,97 @@
+/* eticaret-web/app/sepet/page.module.css */
+
+/* Sayfayı ortalayan ana kutu */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--mor-koyu);
+    border-bottom: 2px solid var(--mor-cok-acik);
+    padding-bottom: 1rem;
+}
+
+/* 1. DURUM: Sepet Boşsa Gösterilecek Beyaz Kutu */
+.emptyCart {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.emptyTitle {
+    font-size: 1.5rem;
+    color: var(--siyah);
+    margin-bottom: 1rem;
+}
+
+.emptyDesc {
+    color: #6B7280;
+    margin-bottom: 2rem;
+}
+
+/* 2. DURUM: Sepet Doluysa Gösterilecek Ürün Satırları */
+.cartList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.itemInfo h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.itemPrice {
+    color: var(--mor-acik);
+    font-weight: bold;
+}
+
+/* Adet Miktarını Gri Kutu İçinde Gösterme */
+.itemQuantity {
+    background-color: var(--gri-acik);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    color: var(--siyah);
+}
+
+/* 3. KASA: En Alttaki Toplam Fiyat Alanı */
+.checkoutSection {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalLabel {
+    font-size: 1.2rem;
+    color: #6B7280;
+}
+
+.totalAmount {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--mor-koyu);
+}
