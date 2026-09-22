@@ -10,6 +10,7 @@ const PORT = 8080;
 //Güvenlik ve JSON veri okuma
 app.use(cors());
 app.use(express.json());
+
 app.use('/api/auth', authRoutes);
 
 //Veritabanı bağlantısı

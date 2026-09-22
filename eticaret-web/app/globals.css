@@ -1,26 +1,63 @@
-@import "tailwindcss";
-
+/* eticaret-web/app/globals.css */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Kurumsal Renklerimiz */
+  --mor-koyu: #4A148C;
+  /* Üst menü, ana butonlar için lüks koyu mor */
+  --mor-acik: #9C27B0;
+  /* Hover (üstüne gelme) efektleri için canlı mor */
+  --mor-cok-acik: #F3E5F5;
+  /* Arkaplan vurguları için pastel mor */
+
+  --beyaz: #FFFFFF;
+  --gri-acik: #F9FAFB;
+  /* Tüm sayfanın göz yormayan arkaplan rengi */
+  --siyah: #111827;
+  /* Okunabilir, yumuşak siyah metinler */
+  --tehlike: #EF4444;
+  /* İptal, silme vb. için kırmızı */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--gri-acik);
+  color: var(--siyah);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tüm sitemizde kullanacağımız Ortak Şık Buton Tasarımı */
+.btn-mor {
+  background-color: var(--mor-koyu);
+  color: var(--beyaz);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Yumuşak geçiş animasyonu */
+}
+
+/* Fareyle üzerine gelince olacak efekt */
+.btn-mor:hover {
+  background-color: var(--mor-acik);
+  transform: translateY(-2px);
+  /* Buton hafifçe yukarı kalkar (Premium his) */
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+  /* Mor bir parlama efekti */
+}
+
+.main-container {
+  padding: 2rem;
+  min-height: 80vh;
 }

@@ -1,0 +1,46 @@
+/* eticaret-web/app/page.module.css */
+.pageTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Izgara (Grid) Sistemi: Telefonlarda alt alta, bilgisayarlarda yan yana dizer */
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.productCard {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productName {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.productDesc {
+    color: #6B7280;
+    margin-bottom: 1.5rem;
+}
+
+.productFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productPrice {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--mor-koyu);
+}
