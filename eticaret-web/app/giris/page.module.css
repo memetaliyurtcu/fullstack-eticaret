@@ -1,0 +1,55 @@
+/* eticaret-web/app/kayit/page.module.css */
+.container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--mor-koyu);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--siyah);
+}
+
+.input {
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Kutucuğa tıklanınca çıkacak olan mor ışık/çerçeve efekti */
+.input:focus {
+    outline: none;
+    border-color: var(--mor-acik);
+    box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.1);
+}
+
+.error {
+    background-color: #FEE2E2;
+    color: var(--tehlike);
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+}
