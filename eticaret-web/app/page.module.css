@@ -1,46 +1,132 @@
 /* eticaret-web/app/page.module.css */
-.pageTitle {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-/* Izgara (Grid) Sistemi: Telefonlarda alt alta, bilgisayarlarda yan yana dizer */
-.productGrid {
+/* Üstteki Karşılama Alanı (Hero) */
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f3e8ff 0%, #ffffff 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(156, 39, 176, 0.05);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--mor-koyu);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Ürünleri Yan Yana Dizen Mükemmel Izgara (Grid) Sistemi */
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    /* Ekran küçülürse otomatik alt satıra atar (Responsive) */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
-.productCard {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+/* Ürün Kartı Tasarımı */
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Çok hafif bir gölge */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* Kartın üstüne gelince yukarı kayma animasyonu (Hover Effect) */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    border: 1px solid #f3f4f6;
 }
 
-.productName {
-    font-size: 1.25rem;
-    font-weight: bold;
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(156, 39, 176, 0.12);
+}
+
+/* Resmin Bulunduğu Arka Plan */
+.imageContainer {
+    width: 100%;
+    height: 280px;
+    background-color: #fcfcfc;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* Kartın İçeriği (Yazılar ve Fiyat) */
+.cardContent {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.productTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--siyah);
     margin-bottom: 0.5rem;
 }
 
 .productDesc {
-    color: #6B7280;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.5;
     margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-.productFooter {
+/* En Alttaki Fiyat ve Butonun Hizalanması */
+.priceContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px dashed #e5e7eb;
 }
 
-.productPrice {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: var(--mor-koyu);
+.price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--mor-ana);
+}
+
+/* Sepete Ekle Butonu */
+.button {
+    background-color: var(--mor-koyu);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.2);
+}
+
+.button:hover {
+    background-color: var(--mor-koyu);
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
 }

@@ -5,6 +5,8 @@ require('dotenv').config();
 
 const app = express();
 const authRoutes = require('./routes/authRoutes');
+const productRoutes = require('./routes/productRoutes');
+
 const PORT = 8080;
 
 //Güvenlik ve JSON veri okuma
@@ -12,6 +14,12 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+
+const orderRoutes =
+    require('./routes/orderRoutes');
+app.use('/api/orders', orderRoutes);
+
 
 //Veritabanı bağlantısı
 const MONGO_URL = process.env.MONGO_URL;
